@@ -1,91 +1,108 @@
-# html-2-apk
- The simplest method for converting your HTML app to a working Android App.
+<!DOCTYPE html>
+<html lang="en">
 
- There are lot of frontend engineers want to convert their own html app to android app,but all the existing methods are too truoblesome,or some methods need you to purchase a software.
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
 
- Now,do it my way,you do not have to install JDK,you do not have to install Android SDK,you do not have to install eclipse or Android Studio and PhoneGap,and you don't need to spend money.More importantly than all of that,this is easy and simple.You can complete it in 10 minutes!Now,let's begin.
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
 
-## Tool
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
- First you'll need AIDE installed in your mobile phone.To be easy,it's the only tool we will use in this tutorial.
-<br >
-Open you mobile application store,search 'AIDE',and install it.
-<br >
-![](https://github.com/ymrdf/html-2-apk/raw/master/pic/02.png)
-## Create new app
-<br >
-Open AIDE,
-<br >
+        .section {
+            margin-bottom: 30px;
+        }
 
-![](https://github.com/ymrdf/html-2-apk/raw/master/pic/03.png)
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
 
-<br >
-click 'For Exports',
-<br >
+        h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
 
-![](https://github.com/ymrdf/html-2-apk/raw/master/pic/04.png)
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
 
-<br >
-click 'New Android App',
-<br >
+        .tetris-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-![](https://github.com/ymrdf/html-2-apk/raw/master/pic/05.png)
+        .tetris-game {
+            display: inline-block;
+            width: 100%;
+            max-width: 400px;
+        }
 
-<br >
-click 'CREACT',
-<br >
+        .contact-info {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
 
-![](https://github.com/ymrdf/html-2-apk/raw/master/pic/06.png)
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Web Developer | Tetris Enthusiast</p>
+    </header>
 
-<br >
-Now,you have created a new android project.The project's home directory is the /AppProjects/MyApp directory in your phone.
+    <div class="container">
+        <section class="section">
+            <h2>About Me</h2>
+            <p>Add your bio here. Briefly introduce yourself and mention your interests, skills, and experiences.</p>
+        </section>
 
+        <section class="section">
+            <h2>Portfolio - Tetris Game</h2>
+            <div class="tetris-container">
+                <canvas class="tetris-game" id="tetrisCanvas" width="300" height="600"></canvas>
+                <p>Play a Tetris game I've developed!</p>
+                <p><a href="tetris.html" target="_blank">Play Tetris</a></p>
+            </div>
+        </section>
 
-## Modify file
+        <section class="section">
+            <h2>Contact Information</h2>
+            <ul class="contact-info">
+                <li>Email: yourname@example.com</li>
+                <li>Phone: +1234567890</li>
+                <li>Website: <a href="http://www.yourwebsite.com" target="_blank">www.yourwebsite.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/yourlinkedin" target="_blank">Your LinkedIn Profile</a></li>
+                <li>GitHub: <a href="https://github.com/yourgithub" target="_blank">Your GitHub Profile</a></li>
+            </ul>
+        </section>
+    </div>
 
-Download files I had provided.
-<br >
-```git clone https://github.com/ymrdf/html-2-apk```
-<br >
-Open up /AppProjects/MyApp/app/src/main using your file browser,replace 'AndroidManifest.xml' with the file of the same name which you just download.
-<br >
-Next ,replace /AppProjects/MyApp/app/src/main/java/com/mycompany/myapp/MainActivity.java.
-<br >
-Next ,replace /AppProjects/MyApp/app/src/main/res/layout/main.xml.
-<br >
-At last,copy the 'assets' folder into /AppProjects/MyApp/app/src/main.There is a sample html app in assets/www,you can replace it with your own.Only one thing to note,the html file must be 'index.html'.
+    <footer style="text-align: center; background-color: #007bff; color: #fff; padding: 10px 0;">
+        &copy; 2024 Your Name. All rights reserved.
+    </footer>
 
+    <!-- Optional: You can include your Tetris game JavaScript file here if needed -->
 
-## Test
+</body>
 
-
-Now,you can see the effect.
-<br >
-Back to AIDE,click the triangular button,
-<br >
-![](https://github.com/ymrdf/html-2-apk/raw/master/pic/07.png)
-<br>
-click install,You should see a new app in your device like this.
-<br>
-![](https://github.com/ymrdf/html-2-apk/raw/master/pic/13.png)
-<br>
-OK,you have successfully converted your html app to android app,and have installed it on your devices.Your '.apk' file is in /AppProjects/MyApp/app/build/bin/.
-
-## Building the APK for Release
-
-Its time for you to deploy your Android app and get it into your users' hands.
-<br >
-Back to AIDE,tap Menu button,
-<br >
-![](https://github.com/ymrdf/html-2-apk/raw/master/pic/09.png)
-<br >
-tap 'project',
-<br >
-![](https://github.com/ymrdf/html-2-apk/raw/master/pic/14.png)
-<br >
-tap 'publish project'.
-<br >
-![](https://github.com/ymrdf/html-2-apk/raw/master/pic/15.png)
-
-
-
+</html>
